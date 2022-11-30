@@ -1,58 +1,17 @@
-Hello 
+# **Sparta Global Training Bank**
+This is a GitHub archive which will consist of the material and progress I make as I go through the C# SDET academy training
+at [SpartaGlobal](https://www.spartaglobal.com/)
 
-# Title 
-### Subtitle
-###### Smallest Subtitle
+## Course Trainers:
+Peter Bellaby and Jospeh McCann
 
-## Text
-Hello 2.0 *Emphasised*, **Strong**
+## Personal Information
+- University Qualification: Chemical and Petroleum Engineering (BEng)
+- Based in London
+- Junior C# SDET Consultant
+- [GitHub Repository](https://github.com/Faisalk175/Engineering134.git)
 
-_italics_, __Bold__, _Italics and **Bold**_
-
-## Quotes
->Something Pro-found
->>The great Phiolosopher Me
->>>More Quote
-
-## Lists
-- This
-- is
-- simple
-- list
-
-
-*More
-*List
-
-1. One
-1. Two
-1. Three
-
-## Images
-![Cat](./Images/Test-Cat.jpg)
-
-## Links
-
-[Markdown Cheatsheet](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
-
-- [Title](#Title)
-- [Quotes](#Quotes)
-- [Images](#Images)
-
-## Github markdown
-
-`this is a code snipped`
-```c#
-int i = 10 *c;
-```
-
-- [ ] Not Done.
-- [X] Done.
-
-Name | Street | Job
-|
-Tim | Legit Lane | Lion tamer
-Bob | RealPlace Road | Computer man
+## [Course Overview](https://customerspartaglobal--c.documentforce.com/sfc/dist/version/renditionDownload?rendition=SVGZ&versionId=0683Y00000KXyoA&operationContext=DELIVERY&contentId=05T3Y00001AA0hD&page=0&d=/a/3Y000000Qpog/jQdwqE_u2ThhydePVzcyNUzHKxjlqIb_9ldLM1ctStI&oid=00D1t000000wJJg&dpt=null&viewId=)
 
 
 
