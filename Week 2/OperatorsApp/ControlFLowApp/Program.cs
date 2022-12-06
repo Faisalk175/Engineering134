@@ -9,6 +9,12 @@
 
             Console.WriteLine(Priority(3));
             Console.WriteLine(CanDrive(12));
+
+            List<int> nums = new List<int> { 10, 6, 22, -17, 3 };
+            Console.WriteLine("Highest foreach loop: " + LoopTypes.HighestForEachLoop(nums));
+            Console.WriteLine("Highest for- loop: " + LoopTypes.HighestForLoop(nums));
+            Console.WriteLine("Highest while- loop: " + LoopTypes.HighestWhileLoop(nums));
+            Console.WriteLine("Highest do-while loop: " + LoopTypes.HighestDoWhileLoop(nums));
         }
 
 
@@ -42,7 +48,7 @@
             {
                 case >= 17:
                     return true;
-                default:
+                default: // if less than 17 return false
                     return false;
             }
         }
