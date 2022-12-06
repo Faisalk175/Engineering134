@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualBasic;
-
-namespace OperatorsApp
+﻿namespace OperatorsApp
 {
     internal class Program
     {
@@ -34,8 +32,20 @@ namespace OperatorsApp
             int mass = 156;
             Console.WriteLine(mass + " pounds is equal to: " + GetStones(mass) + " stones and " + GetPounds(mass) + " pounds.");
 
-           
+            bool isWearingParachute = false;
+            if (isWearingParachute & JumpOutOfAirplane())
+            {
+                Console.WriteLine("Congratulations, you have made a successful jump!");
+            }
+
+
         }
+
+        private static bool JumpOutOfAirplane()
+        {
+            throw new NotImplementedException();
+        }
+
         public static bool EvenOdd(int num)
         {
             return num % 2 == 0;

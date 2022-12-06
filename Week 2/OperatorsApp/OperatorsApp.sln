@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorsApp", "OperatorsApp\OperatorsApp.csproj", "{C8A81C11-F5BE-40E4-8B45-FA1669B9B9DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlFLowApp", "ControlFLowApp\ControlFLowApp.csproj", "{E2EEEEAD-E27B-4E2B-890C-71E4EEF83F5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C8A81C11-F5BE-40E4-8B45-FA1669B9B9DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8A81C11-F5BE-40E4-8B45-FA1669B9B9DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8A81C11-F5BE-40E4-8B45-FA1669B9B9DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2EEEEAD-E27B-4E2B-890C-71E4EEF83F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2EEEEAD-E27B-4E2B-890C-71E4EEF83F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2EEEEAD-E27B-4E2B-890C-71E4EEF83F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2EEEEAD-E27B-4E2B-890C-71E4EEF83F5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
