@@ -5,13 +5,16 @@ public class Program
     static void Main(string[] args)
     {
         int timeOfDay = 21;
+        int age = 10;
         Console.WriteLine(GetGreeting(timeOfDay));
+        Console.WriteLine(AvailableClassifications(age));
     }
 
-    private static string GetGreeting(int timeOfDay)
+    public static string GetGreeting(int timeOfDay)
     {
         string message;
-        if (timeOfDay >= 5 && timeOfDay <= 12)
+        // 0 to 4
+        if (timeOfDay >= 5 && timeOfDay < 12)
         {
             message = "Good morning!";
         }
@@ -20,9 +23,39 @@ public class Program
             message = "Good afternoon!";
         }
         else
+        // 19 to 24
         {
             message = "Good evening!";
         }
         return message;
     }
+
+    public static string AvailableClassifications(int ageOfViewer)
+    {
+        string result;
+        if (ageOfViewer < 12)
+        {
+            result = "U & PG films are available.";
+        }
+        else if (ageOfViewer < 15)
+        {
+            result = "U, PG & 12 films are available.";
+        }
+        else if (ageOfViewer <= 17)
+        {
+            result = "U, PG, 12 & 15 films are available.";
+        }
+        else if (ageOfViewer <= 18)
+        {
+            result = "U, PG, 12, 15 & 18 films are available.";
+        }
+        else
+        {
+            result = "All films are available.";
+        }
+        return result;
+    }
 }
+
+
+
