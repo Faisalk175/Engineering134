@@ -29,7 +29,7 @@
 
 
             Console.WriteLine(EvenOdd(5));
-            int mass = 156;
+            int mass = -30;
             Console.WriteLine(mass + " pounds is equal to: " + GetStones(mass) + " stones and " + GetPounds(mass) + " pounds.");
 
             bool isWearingParachute = false;
@@ -53,6 +53,10 @@
 
         public static int GetStones(int totalPounds)
         {
+            if (totalPounds < 0)
+            {
+                throw new ArgumentOutOfRangeException("Pounds cannot be less than 0");
+            }
             return totalPounds / 14;
         }
         public static int GetPounds(int totalPounds)
