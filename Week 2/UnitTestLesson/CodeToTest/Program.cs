@@ -4,8 +4,8 @@ public class Program
 {
     static void Main(string[] args)
     {
-        int timeOfDay = 28;
-        int age = 10;
+        int timeOfDay = 21;
+        int age = -3;
         Console.WriteLine(GetGreeting(timeOfDay));
         Console.WriteLine(AvailableClassifications(age));
     }
@@ -39,6 +39,10 @@ public class Program
     {
         string result;
 
+        if (ageOfViewer < 0)
+        {
+            throw new ArgumentOutOfRangeException("Age of the viewer cannot be less than 0");
+        }
 
 
         if (ageOfViewer < 12)

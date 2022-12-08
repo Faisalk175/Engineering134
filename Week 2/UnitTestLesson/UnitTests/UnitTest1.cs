@@ -127,6 +127,17 @@ namespace UnitTests
             //Assert that it returned "Good evening!"
             Assert.That(output, Is.EqualTo("Good evening!"));
         }
+
+        [TestCase(-5)]
+        [TestCase(30)]
+        public void WhenTimeOfDayIsThanZero_Grade_ThrowsArgumentOutOfRangeException(int timeOfDay)
+        {
+            Assert.That(
+                () => Program.GetGreeting(timeOfDay),
+                Throws.TypeOf<ArgumentOutOfRangeException>().With.Message.Contain("Greeting cannot be out the range 0 to 23"));
+        }
+
+
     }
     public class Classification_Tests
     {
