@@ -4,7 +4,7 @@ public class Program
 {
     static void Main(string[] args)
     {
-        int timeOfDay = 21;
+        int timeOfDay = 28;
         int age = 10;
         Console.WriteLine(GetGreeting(timeOfDay));
         Console.WriteLine(AvailableClassifications(age));
@@ -13,6 +13,11 @@ public class Program
     public static string GetGreeting(int timeOfDay)
     {
         string message;
+        if (timeOfDay < 0 || timeOfDay > 23)
+        {
+            throw new ArgumentOutOfRangeException("Greeting cannot be out the range 0 to 23");
+        }
+         
         // 0 to 4
         if (timeOfDay >= 5 && timeOfDay < 12)
         {
@@ -33,6 +38,9 @@ public class Program
     public static string AvailableClassifications(int ageOfViewer)
     {
         string result;
+
+
+
         if (ageOfViewer < 12)
         {
             result = "U & PG films are available.";
