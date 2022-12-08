@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Op_CtrlFlow
 {
@@ -13,6 +14,11 @@ namespace Op_CtrlFlow
         // returns the average of the array nums
         public static double Average(List<int> nums)
         {
+            if (nums.Count == 0)
+            {
+                throw new ArgumentOutOfRangeException("Array is empty");
+            }
+
             if (nums.Count <= 0)
             {
                 return 0;
@@ -36,6 +42,12 @@ namespace Op_CtrlFlow
         // "Free" if they are under 5
         public static string TicketType(int age)
         {
+
+            if (age < 0)
+            {
+                throw new ArgumentOutOfRangeException("Age cannot be less than 0");
+            }
+
             string ticketType = string.Empty;
             switch (age)
             {
@@ -63,6 +75,12 @@ namespace Op_CtrlFlow
 
         public static string Grade(int mark)
         {
+            if (mark < 1 || mark > 100)
+            {
+                throw new ArgumentOutOfRangeException("Mark cannot be out the range 1 to 100");
+            }
+
+
             var grade = "";
 
 
@@ -93,6 +111,12 @@ namespace Op_CtrlFlow
 
         public static int GetScottishMaxWeddingNumbers(int covidLevel)
         {
+
+            if (covidLevel < 0 || covidLevel > 4)
+            {
+                throw new ArgumentOutOfRangeException("There cannot be a covid level less than zero or any level higher than 4.");
+            }
+
             int maxNumbers;
             switch (covidLevel)
             {
