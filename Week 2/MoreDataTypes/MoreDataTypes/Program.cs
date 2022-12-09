@@ -8,7 +8,9 @@ namespace MoreDataTypes
             var myString = " C# list fundamentals";
             Console.WriteLine(StringExercise(myString));
             StringInterpolation("Faisal");
-            ParsingStrings();
+            //ParsingStrings();
+            OneDArrays();
+            MultiDArrays();
         }
 
         public static string StringExercise(string myString)
@@ -46,6 +48,74 @@ namespace MoreDataTypes
             string input = Console.ReadLine();
             //int numApples = Int32.Parse(input);
             var success = Int32.TryParse(input, out int parsedApples);
+
+
+
+
+
+        }
+
+        public static void OneDArrays()
+        {
+            int[] myIntArray = { 12, 23, 34, 45, 56 };
+            // Or Array.Reverse(myIntArray)
+            foreach (var element in myIntArray.Reverse())
+            {
+                Console.WriteLine(element);
+            }
+        }
+
+        public static void MultiDArrays()
+        {
+            // 2D Arrays
+            int[,] grid = new int[2, 4]; // 2 columns 4 rows
+            grid[0, 1] = 6;
+            grid[1, 0] = 8;
+            grid[1, 3] = 10;
+
+
+            char[,] gridTwo =
+            {
+                {'a','b' },
+                {'c','d' },
+                {'d','e' },
+                {'e','f' },
+                {'g','h' },
+
+            };
+            //Console.WriteLine("All of grid two");
+            //foreach (var element in gridTwo)
+            //{
+            //    Console.WriteLine(element);
+            //}
+            Console.WriteLine("GridTwo row by row");
+            for (int i = gridTwo.GetLowerBound(0); i <= gridTwo.GetUpperBound(0); i++)
+            {
+                for (int j = gridTwo.GetLowerBound(1); j <= gridTwo.GetUpperBound(1); j++)
+                {
+                    Console.WriteLine($"({i}, {j}) {gridTwo[i, j]} ");
+                }
+                      
+            }
+       
+
+        }
+
+        public static void JaggedArrays()
+        {
+            int[][] intJArray = new int[2][];
+            intJArray[0] = new int[4];
+            intJArray[1] = new int[2];
+
+            intJArray[0][2] = 3;
+            intJArray[1][0] = 5;
+
+            string[][] animalJArray = new string[][]
+            {
+                new string[] {"Hyena", "lion", "Cheetah", "Panther"},
+                new string[] {"Peacock", "Canary"}
+
+            };
 
         }
 
