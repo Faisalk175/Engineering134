@@ -28,7 +28,8 @@ namespace MoreTypes_Lib
         // returns a string representing a test score, written as percentage to 1 decimal place
         public static string Scorer(int score, int outOf)
         {
-            return $"You got {score} out of {outOf}: {100 * Math.Round((Convert.ToDouble(score) / Convert.ToDouble(outOf)), 1)}%";
+            var percent = ((double)score / outOf) * 100;
+            return $"You got {score} out of {outOf}: {Math.Round(percent, 1)}%";
             throw new NotImplementedException();
         }
 
@@ -81,7 +82,7 @@ namespace MoreTypes_Lib
             }
             else
             {
-                throw new NotImplementedException();
+                return $"A:0 B:0 C:0 D:0";
             }
         }
     }
