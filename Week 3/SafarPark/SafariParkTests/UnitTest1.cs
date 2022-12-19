@@ -1,16 +1,23 @@
-namespace SafariParkTests
-{
-    public class Tests
-    {
-        [SetUp]
-        public void Setup()
-        {
-        }
+using VehicleClassLab;
+namespace SafariParkTests;
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
+public class VehicleTests
+{
+    [Test]
+    public void WhenADefaultVehicleMovesTwiceItsPositionIs20()
+    {
+        Vehicle v = new Vehicle();
+        var result = v.Move(2);
+        Assert.AreEqual(20, v.Position);
+        Assert.AreEqual("Moving along 2 times", result);
+    }
+
+    [Test]
+    public void WhenAVehicleWithSpeed40IsMovedOnceItsPositionIs40()
+    {
+        Vehicle v = new Vehicle(5, 40);
+        var result = v.Move();
+        Assert.AreEqual(40, v.Position);
+        Assert.AreEqual("Moving along", result);
     }
 }
