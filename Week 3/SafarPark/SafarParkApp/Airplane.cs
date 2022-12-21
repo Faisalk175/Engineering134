@@ -73,14 +73,14 @@ public class Airplane : Vehicle, IEquatable<Airplane?>, IComparable<Airplane>
     public bool Equals(Airplane? other)
     {
         return other is not null &&
-        NumPassengers == other.NumPassengers;
+        NumPassengers == other.NumPassengers &&
         base.Equals(other);
     }
 
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(Speed, NumPassengers);
+        return HashCode.Combine(Speed, base.GetHashCode());
     }
 
     public int CompareTo(Airplane? other)
