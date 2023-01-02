@@ -192,12 +192,13 @@ public class Program
         //Person alex = new Person("Alex", "Blunt", 18);
         //Console.WriteLine(alex.FullName());
 
-        //Person mehdi = new Person("Mehdi", "Hamdi");
-        //mehdi.Age = 24;
-        //Console.WriteLine(mehdi.Age);
+        Person mehdi = new Person("Mehdi", "Hamdi");
+        mehdi.Age = 24;
+        Console.WriteLine(mehdi.Age);
+        //mehdi.Age is calling the property Age it is not a method as it there are no brackets(Age())
 
-        //mehdi.Height = 285;
-
+        mehdi.Height = 285;
+        Console.WriteLine(mehdi._eyecolour);
 
         ////Object Initialisation
         //int[] nums = {1,2,3,4,5,6,7,8,9};
