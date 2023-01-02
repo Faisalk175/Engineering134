@@ -18,7 +18,7 @@ internal class Program
     public static string HighestNumberOfCaloriesELfIsCarrying()
     {
         string calorieInput = File.ReadAllText("C:/Users/faisa/Documents/Engineering134/Week 3/AdventOfCode/AdventOfCodeApp/TextFile1.txt");
-        string[] everyLine = calorieInput.Split("\n"); // \n is an escape sequence changes cursor position to beginning of the next file
+        string[] everyLine = calorieInput.Split("\n"); // \n is an escape sequence changes cursor position to beginning of the next line
 
         List<int> eachElfsCalorieTotal = new List<int>();
 

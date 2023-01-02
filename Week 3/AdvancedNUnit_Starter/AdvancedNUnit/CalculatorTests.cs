@@ -7,8 +7,16 @@ namespace AdvancedNUnit
 {
     public class CalculatorTests
     {
+        List<int> myList;
+
+        [OneTimeSetUp]
+
+
         [SetUp]
-        public void Setup() { }
+        public void Setup() 
+        {
+            myList = new List<int> { 1, 2, 3 };
+        }
 
         [Test]
         public void Add_Always_ReturnsExpectedResult()
@@ -21,6 +29,14 @@ namespace AdvancedNUnit
             // Assert
             Assert.That(result, Is.EqualTo(expectedResult), "optional failure message");
         }
+
+        [TearDown]
+
+        public void TearDown()
+        {
+            //I run after every test
+        }
+
 
         [Test]
 

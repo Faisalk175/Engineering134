@@ -16,5 +16,7 @@ Peter Bellaby and Jospeh McCann
 
 ## Course Progress
  - Week 1 - Business Week
- - Week 2 - C# Core | [C# basics](https://github.com/Faisalk175/Engineering134/tree/main/Week%202/HelloWorld)
- - Week 3 - 
+ - Week 2 - C# Core | [File contents](https://github.com/Faisalk175/Engineering134/tree/main/Week%202/HelloWorld)
+ - Week 3 - C# OOP | [File contents](https://github.com/Faisalk175/Engineering134/tree/main/Week%203)
+ 
+ 

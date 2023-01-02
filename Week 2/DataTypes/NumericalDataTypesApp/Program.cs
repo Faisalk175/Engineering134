@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Formats.Asn1;
+
 namespace NumericalDataTypesApp;
 
 public class Program
@@ -38,7 +40,29 @@ public class Program
         {
             Console.WriteLine("700_000 is not divisible by 7!");
         }
+
+        unchecked
+        {
+            int bigNumber = Int32.MaxValue + 1;
+            Console.WriteLine(bigNumber);
+
+            int smallNumber = Int32.MinValue - 1;
+        }
+
+        double pi = 3.14159265359;
+        float piFloat = (float)pi;
+        Console.WriteLine(pi);
+        Console.WriteLine(piFloat);
+
+        int bankBalance = -2;
+        uint postCovidBalance = (uint)bankBalance;
+        Console.WriteLine(Convert.ToString(postCovidBalance, 2));
+        Console.WriteLine(Convert.ToString(bankBalance, 2));
+
+
     }
+
+   
 
 
 }

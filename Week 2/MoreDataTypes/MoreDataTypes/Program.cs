@@ -8,9 +8,11 @@ namespace MoreDataTypes
             var myString = " C# list fundamentals";
             Console.WriteLine(StringExercise(myString));
             StringInterpolation("Faisal");
-            //ParsingStrings();
+            ParsingStrings();
             OneDArrays();
             MultiDArrays();
+            DateTimeMethods();
+            Enums();
         }
 
         public static string StringExercise(string myString)
@@ -95,9 +97,9 @@ namespace MoreDataTypes
                 {
                     Console.WriteLine($"({i}, {j}) {gridTwo[i, j]} ");
                 }
-                      
+
             }
-       
+
 
         }
 
@@ -117,12 +119,52 @@ namespace MoreDataTypes
 
             };
 
+            Console.WriteLine("Jagged array of animals");
+            foreach (var element in animalJArray)
+            {
+                foreach (var animal in element)
+                {
+                    Console.WriteLine(animal);
+                }
+            }
+
         }
 
+        public static void DateTimeMethods()
+        {
+            var now = DateTime.Now;
+            Console.WriteLine($"Then time now is {now}");
+            Console.WriteLine($"The time in ticks is {now.Ticks}");
+            var tomorrow = now.AddDays(1);
+            Console.WriteLine($"Tomorrow it will be {tomorrow} which is {tomorrow.Ticks} ticks");
+        }
 
+        public static void Enums()
+        {
+            Suit theSuit = Suit.HEARTS;
+            if(theSuit == Suit.SPADES)
+            {
+                Console.WriteLine($"Suit is {Suit.SPADES}");
+            }
+            else
+            {
+                Console.WriteLine($"the suit is {theSuit} not {Suit.SPADES}");
+            }
+            var anotherSuit = Enum.Parse(typeof(Suit), "CLUBS");
 
+            var mediumValue = (int)Size.MEDIUM;
+            var mySize = (Size)50;
+        }
     }
 
+    public enum Suit
+    {
+        HEARTS, CLUBS, DIAMONDS, SPADES
+    }
+    public enum Size
+    {
+        SMALL = 10, LARGE = 50, MEDIUM = 25
+    }
 }
 
 

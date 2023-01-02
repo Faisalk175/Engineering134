@@ -18,8 +18,57 @@ namespace CSharpFundamentals
             string message = "The red fox jumps over the lazy brown dog.";
             Console.WriteLine(ManipulatingPhrase(message));
 
-            string phrase = "leetspeak";
+            string phrase = "Good Morning";
             Console.WriteLine(ForeachLoopEveningTask(phrase));
+
+            Console.WriteLine("Enter a password:");
+            string userInput = Console.ReadLine();
+
+            while (PasswordCheck(userInput) == false)
+            {
+                Console.Clear();
+                // tell the user the password is incorrect, try again
+                Console.WriteLine("Try agian");
+            } 
+            Console.WriteLine("Well done!");
+
+            //Arrays 
+            int[] nums = new int[5];
+            for  (int i = 0; i < nums.Length; i++)
+            {
+                nums[i] = i + 1;
+            }  
+            // for loop is basically doing this
+            // nums[0] = 1;
+            // nums[1] = 2;
+            // nums[2] = 3;
+            // nums[3] = 4;
+            // nums[4] = 5;
+
+            //Lists
+            List<char> name = new List<char>() { 'P', 'e', 't', 'e', 'r'};
+            name.Reverse();
+
+            //make a method that retursn a "D array which containas all the positions of a chessboard
+            string[,] chessboard = MakeAChessboard();
+
+
+        }
+
+        private static string[,] MakeAChessboard()
+        {
+            List<char> columns = new() { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' };
+
+            string[,] chessPositions = new string[8, 8];
+
+            for(int y = 0; y < 8; y++) //nested loop
+            {
+                for (int x = 0; x < 8; x++)
+                {
+                    chessPositions[x, y] = $"{columns[x]}{8-y}";
+                }
+            }
+            return chessPositions;
         }
 
         private static string ConditionsAndOutcome(int temperature)
@@ -75,15 +124,19 @@ namespace CSharpFundamentals
 
         private static string ForeachLoopEveningTask(string phrase)
         {
-
             
+               phrase = phrase.ToUpper().Replace('E', '3').Replace('A', '4').Replace('I', '1').Replace('O', '0').Replace(" ", string.Empty);
             
-            foreach(char letter in phrase)
-            {
-                phrase = phrase.ToUpper().Replace('E', '3').Replace('A', '4').Replace('I', '1').Replace('O', '0');
-            }
                return phrase;
         }
+
+        public static bool PasswordCheck(string inputPassword)
+        {
+           return (inputPassword == "Password!");
+            
+        }
+
+
         
     }
 

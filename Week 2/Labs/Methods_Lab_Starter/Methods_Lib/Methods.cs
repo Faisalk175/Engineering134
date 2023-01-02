@@ -21,6 +21,8 @@ namespace Methods_Lib
 
         }
 
+
+
         public static int RollDice(Random rng)
         {
             var num1 = rng.Next(1, 7);

@@ -28,7 +28,24 @@ namespace MoreTypes_Lib
         // see unit tests for requirements
         public static string Fortune(Suit suit)
         {
-            return string.Empty;
+            if (suit == Suit.CLUBS)
+            {
+                return "And the seventh rule is if this is your first night at fight club, you have to fight.";
+            }
+            else if (suit == Suit.DIAMONDS)
+            {
+                return "Diamonds are a girls best friend";
+            }
+            else if (suit == Suit.HEARTS)
+            {
+                return "You've broken my heart";
+            }
+            else
+            {
+                return "Bucket and spade";
+            }
+           
         }
+          
     }
 }
